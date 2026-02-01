@@ -99,6 +99,7 @@ main > .search {
   margin-top: 7vh;
   color: var(--text);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
