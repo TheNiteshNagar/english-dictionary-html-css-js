@@ -15,7 +15,7 @@
 body {
   background: var(--bg-dark);
   color: var(--text-muted);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Poppins', sans-serif, Courier, monospace;
   width: 100%;
   min-height: 100dvh;
 }

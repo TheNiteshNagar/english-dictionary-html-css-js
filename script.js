@@ -34,7 +34,7 @@ async function getResult() {
   const data = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchQuery}`)
 
   // if data response is not ok return from this function
-  if (!data.ok) return resultElement.innerHTML = `<h1>${searchQuery} Not Found</h1>`
+  if (!data.ok) return resultElement.innerHTML = `<h1>"${searchQuery}" Not Found</h1>`
 
   // get result in json format
   const result = await data.json()
