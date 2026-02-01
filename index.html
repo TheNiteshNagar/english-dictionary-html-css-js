@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,24 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
+
 <body>
-  <h1>EN Dictionary</h1>
+  <header>
+    <span>EN Dictionary</span>
+    <span class="theme">Theme</span>
+  </header>
+
+  <main>
+    <div class="search">
+      <input class="search-input" type="text" name="search" id="search" autocomplete="off" placeholder="What's in your mind?" autofocus>
+      <button class="search-button"></button>
+    </div>
+    <div class="result"></div>
+  </main>
+
+  <footer>
+    <span title="Created by Nitesh Nagar">Made for English Learner</span>
+  </footer>
 </body>
+
 </html>
