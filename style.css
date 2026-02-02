@@ -6,16 +6,21 @@
 
 :root {
   --bg-dark: hsl(0, 0%, 0%);
-  --bg: hsl(0, 0%, 5%);
+  --bg: hsl(0, 0%, 2%);
   --bg-light: hsl(0, 0%, 10%);
   --text: hsl(0, 0%, 95%);
   --text-muted: hsl(0, 0%, 70%);
+  --highlight: hsl(272, 100%, 74%);
+  --highlight-muted: hsl(275, 69%, 17%);
+  --highlight-dark: hsl(275, 96%, 52%);
+  --danger: hsl(357, 96%, 58%);
+  --icon: hsl(218, 12%, 64%);
 }
 
 body {
-  background: var(--bg-dark);
+  background: var(--bg);
   color: var(--text-muted);
-  font-family: 'Poppins', sans-serif, Courier, monospace;
+  font-family: 'Poppins', Courier, monospace;
   width: 100%;
   min-height: 100dvh;
 }
@@ -26,95 +31,80 @@ body.light {
   --bg-light: hsl(0, 0%, 100%);
   --text: hsl(0, 0%, 5%);
   --text-muted: hsl(0, 0%, 30%);
+  --highlight: hsl(272, 100%, 74%);
+  --highlight-muted: hsl(275, 69%, 17%);
+  --highlight-dark: hsl(275, 96%, 52%);
+  --danger: hsl(357, 96%, 58%);
+  --icon: hsl(218, 12%, 64%);
 }
 
 header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 5vh;
-  background: var(--bg);
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 80px;
+  width: 100%;
   justify-content: space-between;
-  padding: 0 5%;
+  padding: 0 20vw;
+  border-bottom: 1px solid var(--highlight);
   user-select: none;
 }
 
-header > span {
+.dictionary-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.right-header {
+  display: flex;
+  justify-content: center;
+}
+
+.font-option {
+  border-right: 1px solid var(--icon);
+  margin-right: 5px;
+  padding-right: 5px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+select {
+  all: unset;
+  background: var(--bg);
   font-size: medium;
-  font-style: italic;
-  font-weight: bold;
-  color: var(--text-muted);
-}
-
-header > span:hover {
-  color: var(--text);
   cursor: pointer;
 }
 
-main {
-  min-height: 90vh;
-  width: 100%;
-}
-
-main > .search {
-  position: sticky;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 10vh;
-  width: 50vw;
-  background: var(--bg-light);
+.theme {
+  width: 110px;
   display: flex;
   justify-content: center;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
-  border-radius: 20px;
+  margin-left: 5px;
 }
 
-.search > input {
-  all: unset;
-  height: inherit;
-  width: 35vw;
-  font-size: 2vw;
-  color: var(--text);
-}
-
-.search > button {
-  all: unset;
-  height: 7vh;
-  width: 7vh;
-  background: url('https://img.icons8.com/?size=100&id=ObuWtTlsoTj6&format=png&color=000000');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.theme-button {
+  width: 60px;
+  height: 30px;
+  background: var(--bg-light);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  border: 1px solid var(--icon);
+  padding: 0.5px;
   cursor: pointer;
 }
 
-.result {
-  min-height: inherit;
-  margin-top: 7vh;
-  color: var(--text);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.theme-button.right {
+  justify-content: right;
 }
 
-footer {
-  height: 5vh;
-  width: 100%;
-  background: var(--bg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-}
-
-footer > span:hover {
-  color: var(--text);
-  cursor: pointer;
+.theme-button-circle {
+  width: 27px;
+  height: 27px;
+  background: radial-gradient(var(--bg), var(--icon));
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
 }

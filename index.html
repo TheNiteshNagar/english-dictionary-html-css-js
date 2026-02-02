@@ -8,28 +8,38 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
   </style>
+  <link rel="shortcut icon" href="./public/icon/dictionary.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
 
 <body>
   <header>
-    <span>EN Dictionary</span>
-    <span class="theme">Theme</span>
+    <div class="left-header">
+      <img class="dictionary-icon" src="./public/icon/dictionary.png" alt="Dictionary">
+    </div>
+
+    <div class="right-header">
+      <div class="font-option">
+        <select name="select-font" id="select-font" onchange="">
+          <option value="Poppins">Poppins</option>
+          <option value="Courier">Courier</option>
+          <option value="monospace">Monospace</option>
+        </select>
+      </div>
+      <div class="theme">
+        <div class="theme-button">
+          <div class="theme-button-circle"></div>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
-    <div class="search">
-      <input class="search-input" type="text" name="search" id="search" autocomplete="off"
-        placeholder="What's in your mind?" autofocus>
-      <button class="search-button"></button>
-    </div>
-    <div class="result"></div>
+    <h1>Dictionary</h1>
   </main>
 
-  <footer>
-    <span title="Created by Nitesh Nagar">Made for English Learner</span>
-  </footer>
+  <footer></footer>
 </body>
 
 </html>
