@@ -20,7 +20,7 @@
 body {
   background: var(--bg);
   color: var(--text-muted);
-  font-family: 'Poppins', Courier, monospace;
+  font-family: "Poppins", Courier, monospace;
   width: 100%;
   min-height: 100dvh;
 }
@@ -142,7 +142,7 @@ input:focus {
   outline: 1px solid var(--highlight);
 }
 
-.input-panel>input {
+.input-panel > input {
   width: 100%;
   height: 100%;
   background: var(--bg-light);
@@ -244,15 +244,9 @@ input:focus {
   left: 55%;
 }
 
-
 .definition {
-  position: absolute;
-  top: 50%;
-  right: 0%;
-  translate: 0 -50%;
-  border-radius: 50%;
+  color: var(--highlight);
 }
-
 
 /* display none for all details */
 /* .word, .phonetic, .pronunciation, .definition {
