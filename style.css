@@ -244,46 +244,17 @@ input:focus {
   left: 55%;
 }
 
-.other-details {
-  position: relative;
-  width: 100%;
-  min-height: fit-content;
-  /* background-color: aliceblue; */
-  margin-top: 10vh;
-  border-top: 1px solid var(--icon);
-}
 
-/* sub heading for all */
-.sub-heading {
-  width: 90px;
+.definition {
   position: absolute;
+  top: 50%;
+  right: 0%;
   translate: 0 -50%;
-  background-color: var(--bg);
-  top: 0;
-  left: 0;
-  color: var(--text);
-}
-
-.meaning {
-  margin-top: 5vh;
-  margin-bottom: 1vh;
-  font-weight: 300;
-  font-size: medium;
-}
-
-ul, li {
-  margin-left: 9px;
-  padding-left: 0;
-  list-style-type: disc;
-  color: var(--text);
-}
-
-li::marker {
-  color: var(--highlight-dark);
+  border-radius: 50%;
 }
 
 
 /* display none for all details */
-.word, .phonetic, .pronunciation, .about-noun, .about-pronoun, .about-verb, .about-adverb {
+/* .word, .phonetic, .pronunciation, .definition {
   display: none;
-}
+} */

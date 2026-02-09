@@ -52,7 +52,7 @@ async function getWordData(word) {
   phoneticElement.style.display = 'block';
 
   // get audio
-  const pronunciationAudioURL = wordData[0].phonetics[0].audio || wordData[0].phonetics[1].audio || wordData[0].phonetics[2].audio
+  const pronunciationAudioURL = wordData[0].phonetics[0].audio || wordData[0].phonetics[1].audio
   currentAudio = new Audio(pronunciationAudioURL)
   if (currentAudio) {
     const pronunciationElement = document.querySelector('.pronunciation')
@@ -62,6 +62,13 @@ async function getWordData(word) {
     })
     pronunciationElement.style.display = 'block'
   }
+
+  // get meaning
+  const wordDefinition = wordData[0].meanings[0].definitions[0].definition || wordData[0].meanings[1].definitions[0].definition || wordData[0].meanings[2].definitions[0].definition
+  const meaningElement = document.querySelector('.definition')
+  meaningElement.innerHTML = `<h3>Definition: ${wordDefinition}</h3>`
+  meaningElement.style.display = 'block'
+  // console.log(meaningName)
 }
 
 
@@ -87,8 +94,5 @@ function resetEverything () {
   document.querySelector('.word').style.display = 'none'
   document.querySelector('.phonetic').style.display = 'none'
   document.querySelector('.pronunciation').style.display = 'none'
-  document.querySelector('.about-noun').style.display = 'none'
-  document.querySelector('.about-pronoun').style.display = 'none'
-  document.querySelector('.about-verb').style.display = 'none'
-  document.querySelector('.about-adverb').style.display = 'none'
+  document.querySelector('.definition').style.display = 'none'
 }
